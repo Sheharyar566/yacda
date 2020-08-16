@@ -1,0 +1,163 @@
+@import 'Variables.scss';
+
+.dashboard {
+    height: 100%;
+    display: grid;
+    gap: $globalGap;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+
+    & > * {
+        border-radius: $globalBorderRadius;
+        background-color: $secondaryColor;
+    }
+
+    .card {
+        grid-row: 1 / 3;
+        padding: $globalPadding;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .count {
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            font-size: 1.2rem;
+            font-family: 'PT Sans', sans-serif;
+        }
+    }
+
+    .totalCases {
+        grid-column: 1 / 3;
+    }
+    
+    .recovered {
+        grid-column: 3 / 5;
+    }
+    
+    .activeCases {
+        grid-column: 5 / 7;
+    }
+    
+    .totalDeaths {
+        grid-column: 7 / 9;
+    }
+
+    .liveMap {
+        grid-column: 1 / 9;
+        grid-row: 3 / 10;
+    }
+
+    .extrasCard {
+        grid-row: 10 / 13;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: $globalPadding;
+        gap: $extrasGap;
+
+        .extrasImage {
+            grid-column: 1 / 3;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .details {
+            grid-column: 3 / 6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: $extrasBottomPadding;
+        }
+
+        .extrasButton {
+            padding: $extrasButtonPadding;
+            border-radius: $extrasBorderRadius;
+            align-self: flex-start;
+            display: inline-block;
+            margin-bottom: $extrasElementsMargin;
+        }
+
+        .extrasHeadline {
+            font-weight: 700;
+            letter-spacing: 0.25px;
+            font-family: 'PT Sans';
+            margin-bottom: $extrasElementsMargin;
+        }
+
+        .readMore {
+            justify-content: center;
+
+            svg {
+                font-size: $readMoreIconSize;
+                margin: $readMoreIconMargin;
+            }
+        }
+    }
+
+    .updatesCard {
+        grid-column: 1 / 5;
+
+        .extrasButton {
+            background-color: $lightPrimaryColor;
+            color: $primaryColor;
+        }
+
+        .extrasImage {
+            background-image: url('../../assets/images/updates.png');
+        }
+
+        .readMore {
+            color: $primaryColor;
+        }
+    }
+
+    .donateCard {
+        grid-column: 5 / 9;
+
+        .extrasImage {
+            background-image: url('../../assets/images/donate.jpg');
+        }
+
+        .extrasButton {
+            background-color: $lightTertiaryColor;
+            color: $tertiaryColor;
+        }
+
+        .readMore {
+            color: $tertiaryColor;
+        }
+    }
+
+    .recoveryRate {
+        grid-column: 9 / 12;
+        grid-row: 1 / 7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: $globalPadding * 1.25;
+
+        .percentage {
+            height: $percentageHeight;
+            width: $percentageWidth;
+        }
+
+        .bottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            p {
+                font-size: $bottomTextFontSize;
+            }
+        }
+    }
+
+    .liveReport {
+        grid-column: 9 / 12;
+        grid-row: 7 / 13;
+    }
+}

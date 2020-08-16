@@ -1,0 +1,54 @@
+@import 'Variables.scss';
+
+.sidebar {
+    grid-column: 1 / 2;
+    background-color: $secondaryColor;
+    min-width: $sidebarMinWidth;
+    width: $sidebarWidth;
+    padding: $sidebarPadding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: $globalBorderRadius;
+
+    .logo {
+        width: $iconSize;
+        height: $iconSize;
+        margin-bottom: $logoBottomMargin;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        position: relative;
+        gap: $menuItemGap;
+
+        .menuItem {
+            padding: $menuItemPadding;
+            display: block;
+            font-size: $menuItemIconSize;
+            color: $greyColor;
+
+            .itemLink {
+                display: none;
+                margin-top: $itemLinkTopMargin;
+                font-size: $menuItemTextSize;
+            }
+        }
+
+        .menuItem.active {
+            background-color: $primaryColor;
+            color: $secondaryColor;
+            position: relative;
+            right: $menuItemOffset;
+            border-radius: $globalBorderRadius;
+
+            .itemLink {
+                display: block;
+            }
+        }
+    }
+}

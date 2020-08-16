@@ -1,0 +1,60 @@
+/*************************************/
+/************* sizes *****************/
+// Application screen size
+$screenSize: 100vh;
+$appSize: 100%;
+$appPadding: 20px;
+$appColumns: 1fr 12fr;
+
+$globalGap: 25px;
+$globalPadding: 20px;
+$globalBorderRadius: 10px;
+
+// Sidebar Variables
+$iconSize: 60px;
+
+$sidebarWidth: 80%;
+$sidebarGap: 10px;
+$sidebarMinWidth: 90px;
+
+$sidebarPadding: 3rem 0;
+
+// Logo variables
+$logoBottomMargin: 5rem;
+
+// Menu variables
+$menuItemGap: 10px;
+$menuItemPadding: 15px;
+
+$menuItemIconSize: 1.2rem;
+$menuItemTextSize: 0.8rem;
+
+$menuItemOffset: -15px;
+
+$itemLinkTopMargin: 5px;
+
+// Extras Variables
+$extrasButtonPadding: 10px 15px;
+$extrasGap: 20px;
+$extrasBorderRadius: 7.5px;
+$extrasBottomPadding: 15px;
+
+$extrasElementsMargin: $extrasBottomPadding;
+
+$readMoreIconSize: 1.25rem;
+$readMoreIconMargin: 0 0 -4px 3px;
+
+//Recovery Rate Card variables
+$bottomTextFontSize: 0.8rem;
+$percentageWidth: 100%;
+$percentageHeight: 80%;
+
+/*************************************/
+// Colors
+$primaryColor: #fc312f;
+$bgColor: #f0f2f3;
+$secondaryColor: #FFF;
+$greyColor: #888;
+$tertiaryColor: #27ae60;
+$lightPrimaryColor: #fc312f22;
+$lightTertiaryColor: #27ae6022;
